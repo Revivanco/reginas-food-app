@@ -1,18 +1,29 @@
 import './App.css';
 import { Box, Container, Typography } from '@mui/material';
-import Slider from 'react-slick';
+import TarjetaDeUsuario from './components/tarjetaDeUsuario';
+import AspectRatio from '@mui/joy/AspectRatio';
+import Card from '@mui/joy/Card';
+
+const data = [
+  {
+    src: 'https://i.pinimg.com/474x/18/2f/55/182f55abd1b3ab47c85bcb8abaa4c988.jpg',
+    title: 'Night view',
+    description: '4.21M views',
+  },
+  {
+    src: 'https://i.pinimg.com/474x/6a/db/56/6adb56d11ba0707367344bba566e561f.jpg',
+    title: 'Lake view',
+    description: '4.74M views',
+  },
+  {
+    src: 'https://i.pinimg.com/736x/f9/ad/14/f9ad1476a44bec537d1b55946e260941.jpg',
+    title: 'Mountain view',
+    description: '3.98M views',
+  },
+];
+
 
 function App() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
-
   return (
     <Box sx={{ border: "1px solid pink", width: "100%", height: "100vh" }}>
 
@@ -108,68 +119,36 @@ function App() {
         </Typography>
       </Container>
 
-      {/* Carrusel */}
+      {/* carrusle*/}
       <Box
         sx={{
-          position: "absolute",
-          top: "15%",
-          right: "5%",
-          width: "25%",
-          height: "400px",
-          padding: 2,
-          borderRadius: "1px",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-          backgroundColor: "#FFF",
-          left: "50%",
-          transform: "translateX(50%)",
+          display: 'flex',
+          gap: 1,
+          py: 1,
+          overflow: 'auto',
+          width: 343,
+          scrollSnapType: 'x mandatory',
+          '& > *': {
+            scrollSnapAlign: 'center',
+          },
+          '::-webkit-scrollbar': { display: 'none' },
         }}
       >
-        <Slider {...settings}>
-          <div>
-            <img
-              src="https://i.pinimg.com/474x/73/1b/33/731b330e8806b801389f0d11c6ae3fcd.jpg"
-              alt="Hamburguesa"
-              style={{
-                width: "100%",
-                height: "500px",
-                borderRadius: "8px"
-              }}
-            />
-          </div>
-          <div>
-            <img
-              src="https://i.pinimg.com/474x/e5/9c/94/e59c942c1c4fe47313ea610699cc36aa.jpg"
-              alt="Pizza"
-              style={{
-                width: "100%",
-                height: "500px",
-                borderRadius: "8px"
-              }}
-            />
-          </div>
-          <div>
-            <img
-              src="https://i.pinimg.com/736x/99/69/eb/9969ebba5aa804106aed5e682e9dc4eb.jpg"
-              alt="Tacos"
-              style={{
-                width: "100%",
-                height: "500px",
-                borderRadius: "8px"
-              }}
-            />
-          </div>
-          <div>
-            <img
-              src="https://i.pinimg.com/474x/91/03/0d/91030d5e1ef99bd9c5ce1289e3679443.jpg"
-              alt="Sushi"
-              style={{
-                width: "100%",
-                height: "500px",
-                borderRadius: "8px"
-              }}
-            />
-          </div>
-        </Slider>
+        {data.map((item) => (
+          <Card orientation="horizontal" size="sm" key={item.title} variant="outlined">
+            <AspectRatio ratio="1" sx={{ minWidth: 60 }}>
+              <img
+                srcSet={`${item.src}?h=120&fit=crop&auto=format&dpr=2 2x`}
+                src={`${item.src}?h=120&fit=crop&auto=format`}
+                alt={item.title}
+              />
+            </AspectRatio>
+            <Box sx={{ whiteSpace: 'nowrap', mx: 1 }}>
+              <Typography level="title-md">{item.title}</Typography>
+              <Typography level="body-sm">{item.description}</Typography>
+            </Box>
+          </Card>
+        ))}
       </Box>
 
       {/* Footer */}
@@ -189,8 +168,11 @@ function App() {
           © 2025 Regina's Food. Todos los derechos reservados.
         </Typography>
       </Box>
+      <TarjetaDeUsuario />
     </Box>
   );
 }
 
 export default App;
+
+
