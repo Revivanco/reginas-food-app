@@ -8,7 +8,7 @@ import Box from '@mui/joy/Box';
 
 const data = [
     {
-        src: 'https://i.pinimg.com/474x/18/2f/55/182f55abd1b3ab47c85bcb8abaa4c988.jpg',
+        src: 'https://i.pinimg.com/736x/6a/88/32/6a8832d29a911b320f9c68af86f8e134.jpg',
         title: 'Night view',
         description: '4.21M views',
     },
@@ -25,40 +25,43 @@ const data = [
 ];
 
 
-
 function carruselJoy() {
     return (
-    <Box
-        sx={{
-            display: 'flex',
-            gap: 1,
-            py: 1,
-            overflow: 'auto',
-            width: 343,
-            scrollSnapType: 'x mandatory',
-            '& > *': {
-                scrollSnapAlign: 'center',
-            },
-            '::-webkit-scrollbar': { display: 'none' },
-        }}
-    >
-        {data.map((item) => (
-            <Card orientation="horizontal" size="sm" key={item.title} variant="outlined">
-                <AspectRatio ratio="1" sx={{ minWidth: 60 }}>
-                    <img
-                        srcSet={`${item.src}?h=120&fit=crop&auto=format&dpr=2 2x`}
-                        src={`${item.src}?h=120&fit=crop&auto=format`}
-                        alt={item.title}
-                    />
-                </AspectRatio>
-                <Box sx={{ whiteSpace: 'nowrap', mx: 1 }}>
-                    <Typography level="title-md">{item.title}</Typography>
-                    <Typography level="body-sm">{item.description}</Typography>
-                </Box>
-            </Card>
-        ))}
-    </Box>
-    )
+        <Box
+            sx={{
+                display: 'flex',
+                gap: 2,  
+                py: 2,  
+                overflow: 'auto',
+                width: '80%',  
+                scrollSnapType: 'x mandatory',
+                position: 'absolute',  
+                top: '65%',  
+                left: '5%',  
+                scrollBehavior: 'smooth',  
+                '& > *': {
+                    scrollSnapAlign: 'center',
+                },
+                '::-webkit-scrollbar': { display: 'none' },
+            }}
+        >
+            {data.map((item) => (
+                <Card orientation="horizontal" size="sm" key={item.title} variant="outlined" sx={{ width: 300 }}>  
+                    <AspectRatio ratio="1" sx={{ minWidth: 120 }}> 
+                        <img
+                            srcSet={`${item.src}?h=100&fit=crop&auto=format&dpr=2 2x`} 
+                            src={`${item.src}?h=240&fit=crop&auto=format`}
+                            alt={item.title}
+                        />
+                    </AspectRatio>
+                    <Box sx={{ whiteSpace: 'nowrap', mx: 1 }}>
+                        <Typography level="title-md" sx={{ fontSize: '1.5rem' }}>{item.title}</Typography>  
+                        <Typography level="body-sm" sx={{ fontSize: '1.2rem' }}>{item.description}</Typography> 
+                    </Box>
+                </Card>
+            ))}
+        </Box>
+    );
 }
 
 export default carruselJoy;

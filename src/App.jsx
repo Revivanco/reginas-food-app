@@ -9,8 +9,18 @@ import RfTitle from './components/rfTitle/rfTitle.jsx';
 
 function App() {
   return (
-    <Box sx={{ border: "1px solid pink", width: "100%", height: "100vh" }}>
-
+    <Box 
+    sx={{ 
+      border: "1px solid pink",  
+      width: "100%",  
+      minHeight: "200vh",  
+      display: "flex", 
+      flexDirection: "column",  
+      justifyContent: "flex-start", 
+      alignItems: "center", 
+      overflowY: "auto",  
+    }}
+  >
       <RfTitle/>
 
       <ContRecomendaciones/>
