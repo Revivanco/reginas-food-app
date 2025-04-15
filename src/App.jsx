@@ -27,7 +27,7 @@ const App = () => {
     }
 
 
-    
+
   ];
 
   return (
@@ -44,6 +44,98 @@ const App = () => {
       <BarText texto="🍦🍮🌮🍛🥞🥐🫕🍳🍪☕🥖Regina's Food 🍔🥑🧀🍫🎂🍷🫔🍝" />
 
       <CustomCarrusel data={data} />
+
+      cuadrado
+      <Box
+        sx={{
+          border: "1px solid",
+          height: "350px",
+          width: "300px",
+          display: "flex",
+          backgroundColor: "blue"
+        }}>
+        <Box
+          sx={{
+            border: "1px solid",
+            alignItems: "center",
+            height: "40px",
+            width: "2000px",
+            display: "flex",
+            backgroundColor: "red"
+          }}></Box>
+        <Box
+          sx={{
+            height: "0%",
+            width: "0%",
+            borderBottom: "200px solid",
+            borderLeft: "100px solid transparent",
+            borderRight: "100px solid transparent"
+          }}></Box>
+      </Box>
+
+      rectangulo
+      <Box
+        sx={{
+          border: "1px solid",
+          height: "350px",
+          width: "700px",
+          display: "flex",
+          backgroundColor: "red"
+        }}>
+        <Box
+          sx={{
+            border: "1px solid",
+            height: "100px",
+            width: "100px",
+            display: "flex",
+            backgroundColor: "blue"
+          }}></Box>
+
+        <Box
+          sx={{
+            height: "0%",
+            width: "0%",
+            borderBottom: "200px solid",
+            borderLeft: "100px solid transparent",
+            borderRight: "100px solid transparent"
+          }}></Box>
+      </Box>
+
+
+
+      triangulo
+      <Box
+        sx={{
+          height: "0%",
+          width: "0%",
+          borderBottom: "200px solid",
+          borderLeft: "100px solid transparent",
+          borderRight: "100px solid transparent"
+        }}>
+
+        <Box
+          sx={{
+            border: "1px solid",
+            height: "50px",
+            width: "20px",
+            display: "flex",
+            backgroundColor: "red"
+          }}>
+        </Box>
+
+        <Box
+          sx={{
+            border: "1px solid",
+            height: "100px",
+            width: "100px",
+            display: "flex",
+            backgroundColor: "blue"
+          }}></Box>
+
+
+      </Box>
+
+
     </Box>
   );
 }
