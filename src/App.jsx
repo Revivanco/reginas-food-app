@@ -35,7 +35,7 @@ const App = () => {
       sx={{
         border: "2px solid black",
         width: "98vw",
-        height: "98vh",
+        height: "500vh",
         display: "flex",
         alignItems: "center",
         flexFlow: "column"
@@ -135,6 +135,27 @@ const App = () => {
 
       </Box>
 
+
+      circulo y cuadrado
+
+      <Box
+        sx={{
+          border: "1px solid",
+          height: "200px",
+          width: "200px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
+        <Box
+          sx={{
+            width: "200px",
+            height: "200px",
+            borderRadius: "50%",
+            border: "1px solid"
+          }}>
+        </Box>
+      </Box>
 
     </Box>
   );
