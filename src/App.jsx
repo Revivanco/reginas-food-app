@@ -190,6 +190,36 @@ const App = () => {
           }}></Box>
         </Box>
 
+        ejercicio 3 cuadrados 
+          <Box
+          sx={{
+            border: "1px solid",
+            height: "350px",
+            width: "700px",
+            display: "flex",
+            backgroundColor: "red",
+            alignItems:"flex-end",
+            justifyContent: "flex-end"
+          }}>
+            <Box
+            sx={{
+            border: "1px solid",
+            height: "350px",
+            width: "400px",
+            display: "flex",
+            backgroundColor: "green"
+            }}>
+              <Box
+              sx={{
+                border: "1px solid",
+                height: "170px",
+                width: "400px",
+                display: "flex",
+                backgroundColor: "black"
+              }}></Box>
+            </Box>
+          </Box>
+
     </Box>
   );
 }
