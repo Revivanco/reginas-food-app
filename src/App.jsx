@@ -49,20 +49,12 @@ const App = () => {
       <Box
         sx={{
           border: "1px solid",
-          height: "350px",
-          width: "300px",
+          height: "200px",
+          width: "200px",
           display: "flex",
           backgroundColor: "blue"
         }}>
-        <Box
-          sx={{
-            border: "1px solid",
-            alignItems: "center",
-            height: "40px",
-            width: "2000px",
-            display: "flex",
-            backgroundColor: "red"
-          }}></Box>
+
         <Box
           sx={{
             height: "0%",
@@ -156,6 +148,47 @@ const App = () => {
           }}>
         </Box>
       </Box>
+
+      triangulo dentro de circulo
+      <Box
+        sx={{
+          width: "100px",
+          height: "92px",
+          borderRadius: "85%",
+          border: "1px solid",
+          display: "flex",
+          justifyContent: "center"
+        }}>
+        <Box sx={{
+          height: "0%",
+          width: "0%",
+          borderBottom: "75px solid",
+          borderLeft: "40px solid transparent",
+          borderRight: "40px solid transparent"
+        }}>
+        </Box>
+      </Box>
+
+      cuadrado dentro circulo
+        <Box
+        sx={{
+          width: "200px",
+          height: "200px",
+          borderRadius: "85%",
+          border: "1px solid",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
+          <Box
+          sx={{
+          border: "1px solid",
+          height: "30px",
+          width: "30px",
+          display: "flex",
+          backgroundColor: "blue"
+          }}></Box>
+        </Box>
 
     </Box>
   );
