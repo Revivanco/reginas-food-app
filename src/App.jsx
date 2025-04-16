@@ -296,7 +296,8 @@ const App = () => {
               sx={{
                 height: "175px",
                 width: "175px",
-                backgroundColor: "green"
+                backgroundColor: "green",
+                display: "flex",
               }}>
                 <Box
                 sx={{
@@ -304,11 +305,30 @@ const App = () => {
                   width: "175px",
                   display: "flex",
                   backgroundColor: "black",
-                }}></Box>
+
+                }}>
+                  <Box
+                  sx={{
+                  height: " 88px",
+                  width: "87px",
+                  display: "flex",
+                  backgroundColor: "purple"
+                  }}></Box>
+                </Box>
               </Box>
           </Box>
         </Box>
+        <Typography
+        sx={{
+          width: "350px",
+          border: "1px solid",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>este es el texto que voy a meter</Typography>
       </Box>
+
+
     </Box>
   );
 }
