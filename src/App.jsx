@@ -170,7 +170,7 @@ const App = () => {
       </Box>
 
       cuadrado dentro circulo
-        <Box
+      <Box
         sx={{
           width: "200px",
           height: "200px",
@@ -180,46 +180,135 @@ const App = () => {
           justifyContent: "center",
           alignItems: "center"
         }}>
-          <Box
-          sx={{
-          border: "1px solid",
-          height: "30px",
-          width: "30px",
-          display: "flex",
-          backgroundColor: "blue"
-          }}></Box>
-        </Box>
-
-        ejercicio 3 cuadrados 
-          <Box
+        <Box
           sx={{
             border: "1px solid",
-            height: "350px",
-            width: "700px",
+            height: "30px",
+            width: "30px",
             display: "flex",
-            backgroundColor: "red",
-            alignItems:"flex-end",
-            justifyContent: "flex-end"
-          }}>
-            <Box
-            sx={{
+            backgroundColor: "blue"
+          }}></Box>
+      </Box>
+
+      ejercicio 3 cuadrados
+      <Box
+        sx={{
+          border: "1px solid",
+          height: "350px",
+          width: "700px",
+          display: "flex",
+          backgroundColor: "red",
+          alignItems: "flex-end",
+          justifyContent: "flex-end"
+        }}>
+        <Box
+          sx={{
             border: "1px solid",
             height: "350px",
             width: "400px",
             display: "flex",
             backgroundColor: "green"
+          }}>
+          <Box
+            sx={{
+              border: "1px solid",
+              height: "170px",
+              width: "400px",
+              display: "flex",
+              backgroundColor: "black"
+            }}></Box>
+        </Box>
+      </Box>
+
+      nueva ventana que tiene varias cajas
+      <Box
+        sx={{
+          height: "350px",
+          width: "700px",
+          display: "flex",
+          backgroundColor: "red",
+          alignItems: "flex-end",
+          justifyContent: "flex-end"
+        }}>
+        <Box
+          sx={{
+            height: "350px",
+            width: "400px",
+            display: "flex",
+            backgroundColor: "green"
+          }}>
+          <Box
+            sx={{
+              height: "170px",
+              width: "400px",
+              display: "flex",
+              backgroundColor: "black",
+              alignItems: "flex-end",
+              justifyContent: "flex-end"
+
+
             }}>
-              <Box
+            <Box
               sx={{
-                border: "1px solid",
                 height: "170px",
-                width: "400px",
+                width: "200px",
                 display: "flex",
-                backgroundColor: "black"
-              }}></Box>
+                backgroundColor: "blue",
+              }}>
+              <Box
+                sx={{
+                  height: " 85px",
+                  width: "250px",
+                  display: "flex",
+                  backgroundColor: "pink"
+                }}></Box>
             </Box>
           </Box>
+        </Box>
+      </Box>
 
+      ejercicio de cuadrados con cuadros de abajo
+      <Box
+        sx={{
+          height: "350px",
+          width: "700px",
+          display: "flex",
+          backgroundColor: "red",
+        }}>
+        <Box
+          sx={{
+            height: "350px",
+            width: "350px",
+            display: "flex",
+            backgroundColor: "pink",
+            alignItems: "end"
+
+          }}>
+          <Box
+            sx={{
+              height: "175px",
+              width: "350px",
+              backgroundColor: "blue",
+              display: "flex",
+              alignItems: "center"
+            }}>
+            <Box
+              sx={{
+                height: "175px",
+                width: "175px",
+                backgroundColor: "green"
+              }}>
+                <Box
+                sx={{
+                  height: " 88px",
+                  width: "175px",
+                  display: "flex",
+                  backgroundColor: "black",
+                }}></Box>
+              </Box>
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 }
