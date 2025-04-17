@@ -26,10 +26,17 @@ const App = () => {
       title: 'Meet',
       description: '3.98M views',
     }
-
-
-
   ];
+
+
+  let isOn = false
+  let condition = ""
+
+  if (isOn === false) {
+    condition = "none"
+  } else {
+    condition = "flex"
+  }
 
   return (
     <Box
@@ -46,7 +53,7 @@ const App = () => {
 
       <CustomCarrusel data={data} />
 
-      <EjercicioDeComponentes></EjercicioDeComponentes>
+      <EjercicioDeComponentes display={condition}></EjercicioDeComponentes>
 
     </Box>
   );

@@ -1,10 +1,13 @@
-import { Box , Typography} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 
 
-const EjercicioDeComponentes = () => {
+const EjercicioDeComponentes = ({ display }) => {
     return (
-        <Box>
+        <Box
+            sx={{
+                display: {display}
+            }}>
             <Box
                 sx={{
                     border: "1px solid",
