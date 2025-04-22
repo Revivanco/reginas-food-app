@@ -1,9 +1,17 @@
 import { Box, TextField, Typography } from "@mui/material";
-import React from "react";
+import React, {useState} from "react";
 
 
 
 const Formulario = () => {
+    const [stateNumber, setStateNumber] = useState(0)
+    let counter = 0
+
+    const suma = () => {
+        setStateNumber(stateNumber + 1)
+        console.log(stateNumber)
+    }
+    
     return (
         <Box
             sx={{
@@ -42,6 +50,10 @@ const Formulario = () => {
 
 
                 </Box>
+            </Box>
+            <Box>
+                <Typography>{stateNumber}</Typography>
+                <button onClick={suma}>Boton que suma</button>
             </Box>
         </Box>
     )

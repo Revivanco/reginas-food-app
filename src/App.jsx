@@ -57,7 +57,7 @@ const App = () => {
       <Formulario></Formulario>
 
       <EjercicioDeComponentes display={condition}></EjercicioDeComponentes>
-
+      
     </Box>
   );
 }
