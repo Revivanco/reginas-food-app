@@ -5,6 +5,7 @@ import BarText from './components/BarText/BarText.jsx';
 import CustomCarrusel from './components/customCarrusel/customCarrusel.jsx';
 import EjercicioDeComponentes from './components/tarjetaDeUsuario/EjercicioDeComponentes/EjercicioDeComponentes.jsx';
 import Formulario from './components/Formulario/Formulario.jsx';
+import Contador from './components/Contador/Contador.jsx';
 
 
 
@@ -57,7 +58,9 @@ const App = () => {
       <Formulario></Formulario>
 
       <EjercicioDeComponentes display={condition}></EjercicioDeComponentes>
-      
+
+      <Contador></Contador>
+
     </Box>
   );
 }
