@@ -4,6 +4,7 @@ import TarjetaDeUsuario from './components/tarjetaDeUsuario/tarjetaDeUsuario.jsx
 import BarText from './components/BarText/BarText.jsx';
 import CustomCarrusel from './components/customCarrusel/customCarrusel.jsx';
 import EjercicioDeComponentes from './components/tarjetaDeUsuario/EjercicioDeComponentes/EjercicioDeComponentes.jsx';
+import Formulario from './components/Formulario/Formulario.jsx';
 
 
 
@@ -52,6 +53,8 @@ const App = () => {
       <BarText texto="🍦🍮🌮🍛🥞🥐🫕🍳🍪☕🥖Regina's Food 🍔🥑🧀🍫🎂🍷🫔🍝" />
 
       <CustomCarrusel data={data} />
+
+      <Formulario></Formulario>
 
       <EjercicioDeComponentes display={condition}></EjercicioDeComponentes>
 
