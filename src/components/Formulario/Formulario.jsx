@@ -1,10 +1,29 @@
 import { Box, TextField, Typography } from "@mui/material";
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 
 
 const Formulario = () => {
-    
+    const [datosDeFormulario, setDatosDeFormulario] = useState({ name: "", lastName: "", email: "", age: 0, cellphone: "" })
+
+    const handleChange = (e) => {
+       // console.log(e)
+       //console.log(e.target)
+        const { name , value } = e.target 
+       // console.log(name)
+       // console.log(value)
+        setDatosDeFormulario((prev) => ({
+            ...prev, [name]: value
+
+        }))
+    }
+
+    const funcionConsologueadora = () => {
+        console.log(datosDeFormulario)
+    }
+
+
+
     return (
         <Box
             sx={{
@@ -35,13 +54,14 @@ const Formulario = () => {
                         justifyContent: "center",
                         flexFlow: "column"
                     }}>
-                    <TextField color="secondary" label="Name"></TextField>
-                    <TextField color="secondary" label="Last Name"></TextField>
-                    <TextField color="secondary" label="E-mail"></TextField>
-                    <TextField color="secondary" label="Age"></TextField>
-                    <TextField color="secondary" label="Cellphone"></TextField>
-
-
+                    <TextField color="secondary" label="Name" name="name"  onChange={handleChange}></TextField>
+                    <TextField color="secondary" label="Last Name" name="lastName"  onChange={handleChange}></TextField>
+                    <TextField color="secondary" label="E-mail" name="email"  onChange={handleChange}></TextField>
+                    <TextField color="secondary" label="Age" name="age"  onChange={handleChange}></TextField>
+                    <TextField color="secondary" label="Cellphone" name="cellphone"onChange={handleChange}></TextField>
+                </Box>
+                <Box>
+                    <button  onClick={funcionConsologueadora} >Mi boton que consologuea</button>
                 </Box>
             </Box>
         </Box>

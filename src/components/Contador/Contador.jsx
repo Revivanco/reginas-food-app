@@ -5,8 +5,7 @@ import { useState } from "react";
 
 
 const Contador = () => {
-    const [stateNumber, setStateNumber] = useState(0)
-    let counter = 0
+    const [stateNumber, setStateNumber] = useState(0);
 
     const suma = () => {
         setStateNumber(stateNumber + 1)
