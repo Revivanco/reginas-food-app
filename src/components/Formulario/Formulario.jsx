@@ -9,28 +9,32 @@ const Formulario = () => {
 
 
     const handleChange = (e) => {
+        const { name , value } = e.target 
 
-        if (name === 'address' || name === 'maritalStatus') {
-            setDatosAdicionalesDeFormulario((prev) => ({
+       if(name in datosAdicionalesFormulario){
+      setDatosAdicionalesDeFormulario((prev) => ({
            ...prev, [name]: value
 
        }))
-      }
+      }else{
        // console.log(e)
        //console.log(e.target)
-        const { name , value } = e.target 
-       console.log(name)
+       //console.log(name)
        // console.log(value)
         setDatosDeFormulario((prev) => ({
             ...prev, [name]: value
 
         }))
     }
-
-
-    const funcionConsologueadora = () => {
-        console.log(datosDeFormulario)
     }
+
+   
+
+     
+    const funcionConsologueadora = () => {
+        console.log( datosDeFormulario);
+        console.log(datosAdicionalesFormulario);
+    };
 
 
     return (
@@ -75,6 +79,7 @@ const Formulario = () => {
                 </Box>
                 <Box>
                     <button  onClick={funcionConsologueadora} >Mi boton que consologuea</button>
+                    
                 </Box>
             </Box>
         </Box>
