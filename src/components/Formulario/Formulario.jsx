@@ -4,35 +4,35 @@ import React, { useState } from "react";
 
 
 const Formulario = () => {
-    const [datosDeFormulario, setDatosDeFormulario] = useState({ name: "", lastName: "", email: "", age: 0, cellphone: ""})
-    const [datosAdicionalesFormulario, setDatosAdicionalesDeFormulario] = useState({address:"", maritalStatus:""})
+    const [datosDeFormulario, setDatosDeFormulario] = useState({ name: "", lastName: "", email: "", age: 0, cellphone: "" })
+    const [datosAdicionalesFormulario, setDatosAdicionalesDeFormulario] = useState({ address: "", maritalStatus: "" })
 
 
     const handleChange = (e) => {
-        const { name , value } = e.target 
+        const { name, value } = e.target
 
-       if(name in datosAdicionalesFormulario){
-      setDatosAdicionalesDeFormulario((prev) => ({
-           ...prev, [name]: value
+        if (name in datosAdicionalesFormulario) {
+            setDatosAdicionalesDeFormulario((prev) => ({
+                ...prev, [name]: value
 
-       }))
-      }else{
-       // console.log(e)
-       //console.log(e.target)
-       //console.log(name)
-       // console.log(value)
-        setDatosDeFormulario((prev) => ({
-            ...prev, [name]: value
+            }))
+        } else {
+            // console.log(e)
+            //console.log(e.target)
+            //console.log(name)
+            // console.log(value)
+            setDatosDeFormulario((prev) => ({
+                ...prev, [name]: value
 
-        }))
+            }))
+        }
     }
-    }
 
-   
 
-     
+
+
     const funcionConsologueadora = () => {
-        console.log( datosDeFormulario);
+        console.log(datosDeFormulario);
         console.log(datosAdicionalesFormulario);
     };
 
@@ -67,19 +67,19 @@ const Formulario = () => {
                         justifyContent: "center",
                         flexFlow: "column"
                     }}>
-                    <TextField color="secondary" label="Name" name="name"  onChange={handleChange}></TextField>
-                    <TextField color="secondary" label="Last Name" name="lastName"  onChange={handleChange}></TextField>
-                    <TextField color="secondary" label="E-mail" name="email"  onChange={handleChange}></TextField>
-                    <TextField color="secondary" label="Age" name="age"  onChange={handleChange}></TextField>
-                    <TextField color="secondary" label="Cellphone" name="cellphone"onChange={handleChange}></TextField>
+                    <TextField color="secondary" label="Name" name="name" onChange={handleChange}></TextField>
+                    <TextField color="secondary" label="Last Name" name="lastName" onChange={handleChange}></TextField>
+                    <TextField color="secondary" label="E-mail" name="email" onChange={handleChange}></TextField>
+                    <TextField color="secondary" label="Age" name="age" onChange={handleChange}></TextField>
+                    <TextField color="secondary" label="Cellphone" name="cellphone" onChange={handleChange}></TextField>
 
-                    <TextField color="secondary" label="Adress" name="address"onChange={handleChange}></TextField>
-                    <TextField color="secondary" label="Mrital status" name="maritalStatus"onChange={handleChange}></TextField>
+                    <TextField color="secondary" label="Adress" name="address" onChange={handleChange}></TextField>
+                    <TextField color="secondary" label="Mrital status" name="maritalStatus" onChange={handleChange}></TextField>
 
                 </Box>
                 <Box>
-                    <button  onClick={funcionConsologueadora} >Mi boton que consologuea</button>
-                    
+                    <button onClick={funcionConsologueadora} >Mi boton que consologuea</button>
+
                 </Box>
             </Box>
         </Box>
